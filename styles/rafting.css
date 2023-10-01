@@ -15,24 +15,47 @@
     --nav-hover-background-color: #E7EAE9;
 }
 
-h1, h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
-}
-
-p {
-    font-family: var(--paragraph-font);
-    padding: 25px;
-}
-
-.social-icons a {
-    text-decoration: none;
+body, h1, h2, p, ul, li, img {
+    margin: 0;
+    padding: 0;
 }
 
 body {
+    font-family: var(--heading-font, var(--paragraph-font));
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+header {
+    background-color: var(--secondary-color);
+    color: var(--secondary-color);
+    padding: 10px 0;
+    text-align: center;
+}
+
+header img {
+    max-width: 100%;
+}
+
+nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.main {
     max-width: 1200px;
     margin: 0 auto;
-    background-color: var(--primary-color);
+    pad: 20px;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
 }
 
 .hero img {
@@ -42,18 +65,16 @@ body {
 }
 
 .hero h1 {
+    color: var(--secondary-color);
     position: absolute;
     top: 20%;
     left: 10%;
-    color: var(--secondary-color);
     font-size: 2.5rem;
 }
 
 .hero article {
-    position: absolute;
-    top: 40%;
-    left: 10%;
     background-color: var(--accent1-color);
+    position: absolute;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px var(--accent2-color);
@@ -62,5 +83,18 @@ body {
 .hero article img {
     float: right;
     margin: 0 0 10px 10px;
+}
+
+.sociallinks {
+    margin-top: 10px;
+}
+
+.sociallinks a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.sociallinks img {
+    width: 30px;
 }
 
