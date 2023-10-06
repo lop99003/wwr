@@ -38,43 +38,54 @@ p {
     text-decoration: none; /* Remove underlines */
 }
   
-  /* Limit the width of the entire page */
+/* Limit the width of the entire page */
 
-
+/* Style the hero container */
 .hero {
     position: relative;
+    text-align: center; /* Center-align the content within the hero container */
 }
 
 /* Style the hero image */
 .hero img {
-    display: block;
     width: 100%;
     height: auto;
 }
 
+/* Style the h1 heading */
 .hero h1 {
     position: absolute;
-    top: 50%;
+    top: 5%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: larger;
+    font-size: large;
     color: aliceblue;
+    z-index: 1; /* Ensure the heading is on top of the image */
 }
 
-/* Position the article absolutely on top of the hero image */
+/* Style the paragraph and article container */
 .hero article {
     position: absolute;
-    top: 50%; /* Vertically center the article */
-    left: 50%; /* Horizontally center the article */
-    transform: translate(-50%, -50%); /* Center it perfectly */
-    background-color: rgba(85, 67, 67, 0.226); /* Background color with opacity */
-    padding: 20px; /* Add some padding for readability */
-    color: #e0d9d9; /* Font color */
+    top: 55%; /* Adjust the top position as needed */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Ensure the article container is on top of the image */
     width: 80%; /* Adjust the width as needed */
+    text-align: left; /* Align text to the left within the article container */
+    background-color: rgba(0, 0, 0, 0.7); /* Background color with opacity */
+    padding: 20px; /* Add padding for readability */
 }
-  
-  /* Style the image inside the article */
+
+/* Style the paragraph within the article */
+.hero article p {
+    font-size: 16px; /* Adjust the font size as needed */
+    color: var(--nav-hover-link-color); /* Font color */
+}
+
+/* Style the "happy-working-employees" image within the article container */
 .hero article img {
     float: right; /* Float the image to the right */
+    width: 8%; /* Adjust the width as needed */
+    height: auto;
     margin-left: 10px; /* Add spacing between the image and the paragraph */
 }
