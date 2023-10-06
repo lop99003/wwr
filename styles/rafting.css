@@ -12,19 +12,25 @@
     --paragraph-font: 'Nanum Pen Script', cursive;
     
     --nav-background-color: #1C1F62;
-    --nav-link-color: #128021;
+    --nav-link-color: #1E203F;
     --nav-hover-link-color: #A8AABA;
-    --nav-hover-background-color: #18bb85;
+    --nav-hover-background-color: #E7EAE9;
+}
+
+body {
+    font-family: var(--paragraph-font);
+    max-width: 960px;
+    padding: 20px;
 }
 
 h1, h2 {
-    font-family: var(--heading-font); /* Specify the font family for headings */
-    color: #237ebb; /* Set the font color to blue (#007bff) */
+    font-family: var(--heading-font);
+    color: var(--primary-color);
 }
 
 p {
     font-family: var(--paragraph-font);
-    color: #1E203F;
+    padding: 25px;
 }
 
 /* Remove underlines from social media links */
@@ -33,10 +39,7 @@ p {
 }
   
   /* Limit the width of the entire page */
-body {
-    max-width: 800px; /* Adjust the max-width as needed */
-    margin: 0 auto; /* Center the content horizontally */
-}
+
 
 .hero {
     position: relative;
@@ -57,6 +60,7 @@ body {
     font-size: larger;
     color: aliceblue;
 }
+
 /* Position the article absolutely on top of the hero image */
 .hero article {
     position: absolute;
