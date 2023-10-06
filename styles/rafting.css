@@ -1,5 +1,7 @@
+/* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Shadows+Into+Light+Two&display=swap');
 
+/* Root variables */
 :root {
     --primary-color: #1C1F62;
     --secondary-color: #1E203F;
@@ -10,54 +12,37 @@
     --paragraph-font: 'Nanum Pen Script', cursive;
     
     --nav-background-color: #1C1F62;
-    --nav-link-color: #1E203F;
+    --nav-link-color: #128021;
     --nav-hover-link-color: #A8AABA;
-    --nav-hover-background-color: #E7EAE9;
+    --nav-hover-background-color: #18bb85;
 }
 
-body, h1, h2, p, ul, li, img {
-    margin: 0;
-    padding: 0;
+h1, h2 {
+    font-family: var(--heading-font); /* Specify the font family for headings */
+    color: #237ebb; /* Set the font color to blue (#007bff) */
 }
 
+p {
+    font-family: var(--paragraph-font);
+    color: #1E203F;
+}
+
+/* Remove underlines from social media links */
+.sociallinks a {
+    text-decoration: none; /* Remove underlines */
+}
+  
+  /* Limit the width of the entire page */
 body {
-    font-family: var(--heading-font, var(--paragraph-font));
-    font-size: 16px;
-}
-
-body {
-    background-color: var(--primary-color);
-    color: var(--primary-color);
-}
-
-header {
-    background-color: var(--secondary-color);
-    color: var(--secondary-color);
-    padding: 10px 0;
-    text-align: center;
-}
-
-header img {
-    max-width: 100%;
-}
-
-nav a {
-    color: var(--secondary-color);
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-.main {
-    max-width: 1200px;
-    margin: 0 auto;
-    pad: 20px;
+    max-width: 800px; /* Adjust the max-width as needed */
+    margin: 0 auto; /* Center the content horizontally */
 }
 
 .hero {
     position: relative;
-    text-align: center;
 }
 
+/* Style the hero image */
 .hero img {
     display: block;
     width: 100%;
@@ -65,36 +50,27 @@ nav a {
 }
 
 .hero h1 {
-    color: var(--secondary-color);
     position: absolute;
-    top: 20%;
-    left: 10%;
-    font-size: 2.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: larger;
+    color: aliceblue;
 }
-
+/* Position the article absolutely on top of the hero image */
 .hero article {
-    background-color: var(--accent1-color);
     position: absolute;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px var(--accent2-color);
+    top: 50%; /* Vertically center the article */
+    left: 50%; /* Horizontally center the article */
+    transform: translate(-50%, -50%); /* Center it perfectly */
+    background-color: rgba(85, 67, 67, 0.226); /* Background color with opacity */
+    padding: 20px; /* Add some padding for readability */
+    color: #e0d9d9; /* Font color */
+    width: 80%; /* Adjust the width as needed */
 }
-
+  
+  /* Style the image inside the article */
 .hero article img {
-    float: right;
-    margin: 0 0 10px 10px;
+    float: right; /* Float the image to the right */
+    margin-left: 10px; /* Add spacing between the image and the paragraph */
 }
-
-.sociallinks {
-    margin-top: 10px;
-}
-
-.sociallinks a {
-    display: inline-block;
-    margin: 0 10px;
-}
-
-.sociallinks img {
-    width: 30px;
-}
-
