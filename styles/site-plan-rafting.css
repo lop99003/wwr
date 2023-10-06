@@ -39,7 +39,7 @@ header {
 }
 
 nav {
-    background-color: var(--nav-background-color);
+    background-color: var(--nav-hover-link-color-color);
     font-size: 1.2rem;
     display: flex;
 }
