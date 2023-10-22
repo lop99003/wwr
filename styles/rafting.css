@@ -228,3 +228,62 @@ table {
 .duration, .difficulty, .price {
     padding-left: 10px; /* Adjust the desired spacing */
 }
+
+h3 {
+    font-size: 100px; /* Adjust the font size as needed */
+}
+
+h3 {
+    font-size: 24px;
+    text-align: center; /* Center-align the text */
+}
+
+/* Add table styles to display borders */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Add some top margin for spacing */
+}
+
+table, th, td {
+    border: 1px solid #000; /* Add a 1px black border to table, th, and td elements */
+}
+
+th, td {
+    padding: 10px; /* Add padding to th and td elements for spacing */
+    text-align: center; /* Center-align text in table cells */
+}
+
+.wireframe-link {
+    color: var(--accent2-color);
+    text-decoration: none; /* Remove underlines from the link */
+}
+
+/* Style the footer */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Style the footer text */
+.footer p {
+    margin-bottom: 10px; /* Add some margin at the bottom to separate from links */
+}
+
+/* Style the footer links */
+.footer .sociallinks, .wireframe-link {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%; /* Ensure they take up the full width of the footer */
+}
+
+/* Style the wireframe link */
+.wireframe-link {
+    margin-left: 10px; /* Add some spacing between the social links and the wireframe link */
+}
+
