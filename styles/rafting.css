@@ -60,7 +60,7 @@ footer {
 .header {
     display: grid;
     grid-template-columns: auto 1fr;
-    align-items: left;
+    align-items: center; /* Use a valid value like center to vertically center items */
     gap: 20px;
 }
 
