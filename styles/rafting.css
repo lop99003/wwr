@@ -26,6 +26,7 @@ body {
 h1, h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
+    text-align: center;
 }
 
 p {
@@ -39,7 +40,7 @@ footer {
     color: var(--accent2-color);
     padding: 20px;
     display: flex;
-    justify-content: center
+    justify-content: center;
 }
  
 .sociallinks {
@@ -59,21 +60,22 @@ footer {
 .header {
     display: grid;
     grid-template-columns: auto 1fr;
-    align-items: center;
+    align-items: left;
     gap: 20px;
 }
 
 .header img{
-    max-width: 100%;
+    max-width: 25%;
     height: auto;
+    float: left;
 }
 
 nav {
-  background-color: var(--nav-background-color);
-  padding: 1rem;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+    background-color: var(--nav-background-color);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .nav a {
@@ -104,7 +106,7 @@ section:nth-child(3) {
     justify-content: space-between;
 }
 
-
+/* New CSS rules for the "Trips" page */
 
 /* Style the hero container */
 .hero {
@@ -156,100 +158,73 @@ section:nth-child(3) {
     margin-left: 10px; /* Add spacing between the image and the paragraph */
 }
 
-/* Style the history section */
-.history {
+/* Style for images to take up the same width of the page */
+img {
+    width: 50vw; /* Set the width to 100% of the viewport width */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Ensure the image is a block-level element */
+    margin: 0; /* Remove any default margins */
+}
+
+/* Root variables and other CSS rules as before */
+
+/* Style for header and footer */
+.header, .footer {
     text-align: center;
-    padding: 20px 0;
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+    padding: 20px;
+    height: 100px; /* Set the height as needed */
+    display: flex;
+    justify-content: center;
 }
 
-/* Style the history content using CSS Grid */
-.history-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns, each taking 50% of the space */
-    gap: 20px; /* Adjust the gap between columns */
-    align-items: center; /* Center vertically within the section */
+/* Style for h1 and h2 */
+h1, h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    text-align: center; /* Center-align the text */
 }
 
-/* Style the history text */
-.history-text {
-    text-align: left; /* Align text to the left within its column */
+/* Style for images */
+img {
+    width: 100%; /* Set the width to 100% */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Ensure the image is a block-level element */
+    margin: 0; /* Remove any default margins */
 }
 
-/* Style the history image */
-.history-image img {
-    max-width: 100%; /* Ensure the image fits its container */
-    height: auto;
-    display: block;
-    margin: 0 auto; /* Center horizontally within its column */
+/* Increase the font size for the entire page */
+body {
+    font-size: 36px; /* Adjust the desired font size in pixels */
 }
 
-/* Style the "Adventure Awaits You!" section */
-.adventures {
-    text-align: center; /* Center-align the content */
-    padding: 20px 0;
+/* Adjust the font size for specific elements (optional) */
+h1 {
+    font-size: 72px; /* Example: Increase the size of h1 headings */
 }
 
-.adventure-images {
-    display: flex; /* Use flexbox for horizontal layout */
-    flex-wrap: wrap; /* Allow wrapping of images to the next line */
-    justify-content: space-between; /* Distribute images evenly */
+p {
+    font-size: 16px; /* Example: Increase the size of paragraphs */
 }
 
-/* Style individual figure elements */
-.adventure-images figure {
-    flex: 1; /* Distribute available space equally among figures */
-    max-width: calc(20% - 20px); /* Adjust the width as needed */
-    margin: 0 10px; /* Add spacing between figures */
-    text-align: center; /* Center-align figures and captions */
+/* Increase font size for paragraphs not directly under <h3> elements */
+p:not(h3 > p) {
+    font-size: 36px; /* Adjust the desired font size */
 }
 
-/* Style the images within figure elements */
-.adventure-images img {
-    max-width: 100%; /* Ensure images fit within their containers */
-    height: auto;
+/* Add space between cells by adjusting cell padding */
+table {
+    width: 100%;
+    table-layout: fixed;
 }
 
-/* Style the figcaption captions */
-.adventure-images figcaption {
-    margin-top: 10px; /* Add spacing between image and caption */
-    font-size: 14px; /* Adjust font size as needed */
-    color: var(--primary-color); /* Use your primary color for captions */
+/* Style the trip name cell */
+.trip-name {
+    padding-right: 10px; /* Adjust the desired spacing */
 }
 
-/* Add the following styles to make the contact area stacked */
-
-/* Contact form container styles */
-.contact .contact-form {
-  max-width: 100%; /* Set the maximum width to match the hero image width */
-  margin: 0 auto; /* Center the form container on the page */
-}
-
-/* Label styles for stacked form elements */
-.contact label {
-  display: block; /* Display labels as blocks to stack them vertically */
-  margin-top: 10px;
-}
-
-/* Input, radio buttons, and checkbox styles */
-.contact input[type="text"],
-.contact input[type="email"],
-.contact textarea,
-.contact input[type="radio"],
-.contact input[type="checkbox"] {
-  width: 100%; /* Set width to 100% to make them full width within their containers */
-  padding: 10px;
-  margin: 5px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-/* Submission button styles */
-.contact .submit-button {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 10px; /* Add some top margin to separate the button from the previous element */
+/* Style the duration, difficulty, and price cells */
+.duration, .difficulty, .price {
+    padding-left: 10px; /* Adjust the desired spacing */
 }
