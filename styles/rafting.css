@@ -282,8 +282,76 @@ th, td {
     width: 100%; /* Ensure they take up the full width of the footer */
 }
 
-/* Style the wireframe link */
-.wireframe-link {
+/* Style the wireframe link specifically for the "trips.html" page */
+.wireframe-link-trips {
+    color: var(--accent2-color); /* For example, change the link color to blue */
     margin-left: 10px; /* Add some spacing between the social links and the wireframe link */
 }
+
+/* Style the wireframe link */
+.wireframe-link {
+    color: var(--accent2-color);
+    text-decoration: none;
+}
+
+/* Add a grid container to your main content */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Three equal-width columns */
+    gap: 20px; /* Adjust the gap as needed */
+}
+
+/* Style for individual grid items */
+/* Add the following CSS to your existing stylesheet */
+
+/* Modify the grid styles to show grid lines between rows */
+
+.grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr auto; /* The first two rows fill the available space, the third row adjusts to content */
+    gap: 20px; /* Adjust the gap between grid items */
+}
+
+.grid-item {
+    border: 1px solid #000; /* Add borders to the grid items */
+    padding: 10px; /* Add padding for spacing */
+    text-align: center;
+}
+
+
+/* You can adjust the border color, padding, and other styles as needed */
+
+.translucent-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    text-align: center;
+    z-index: 2;
+}
+
+.translucent-box p {
+    color: gray;
+    font-size: 24px;
+}
+
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter input[type="text"],
+.newsletter input[type="email"],
+.newsletter button {
+    width: 100%;
+    font-family: var(--paragraph-font);
+    font-size: 24px; /* Increase the font size to 18px or as needed */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #000;
+    border-radius: 4px;
+}
+
 
